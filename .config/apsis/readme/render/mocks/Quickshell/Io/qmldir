@@ -1,0 +1,9 @@
+# Registers the Quickshell.Io stand-ins.
+# Edit: add a line for each new stand-in in this folder.
+
+module Quickshell.Io
+Process 1.0 Process.qml
+StdioCollector 1.0 StdioCollector.qml
+SplitParser 1.0 SplitParser.qml
+FileView 1.0 FileView.qml
+IpcHandler 1.0 IpcHandler.qml

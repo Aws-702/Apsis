@@ -1,0 +1,42 @@
+#!/bin/sh
+# Root helper (/usr/local/bin/apsis-sddm-apply): writes the palette into the SDDM theme.conf.
+# Usage: apsis-sddm-apply cherry|navy | auto ACCENT BGMAIN BGCARD BGITEM TEXT TEXT2 OUTLINE
+
+set -e
+THEME="/usr/share/sddm/themes/apsis/theme.conf"
+[ -f "$THEME" ] || exit 1
+
+pal="$1"
+is_hex() { printf '%s' "$1" | grep -Eq '^#?[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$'; }
+hx() { if is_hex "$1"; then printf '#%s' "${1#\#}"; else printf ''; fi; }
+
+case "$pal" in
+    cherry|navy)
+        base="$pal"
+        acc=""; bgm=""; bgc=""; bgi=""; tp=""; ts=""; ol=""
+        ;;
+    auto)
+        base="cherry"
+        acc=$(hx "$2"); bgm=$(hx "$3"); bgc=$(hx "$4"); bgi=$(hx "$5")
+        tp=$(hx "$6"); ts=$(hx "$7"); ol=$(hx "$8")
+        ;;
+    *) exit 2 ;;
+esac
+
+set_kv() {
+    k="$1"; v="$2"
+    if grep -qE "^$k=" "$THEME"; then
+        sed -i -E "s|^$k=.*|$k=$v|" "$THEME"
+    else
+        printf '%s=%s\n' "$k" "$v" >> "$THEME"
+    fi
+}
+
+set_kv palette              "$base"
+set_kv accentOverride       "$acc"
+set_kv bgOverride           "$bgm"
+set_kv bgCardOverride       "$bgc"
+set_kv bgItemOverride       "$bgi"
+set_kv textPrimaryOverride  "$tp"
+set_kv textSecondaryOverride "$ts"
+set_kv outlineOverride      "$ol"

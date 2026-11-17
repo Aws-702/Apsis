@@ -1,0 +1,542 @@
+{
+ "commands": [
+  {
+   "match": "apsis-updates\\.sh list",
+   "out": "repo\tfirefox\t145.0-1\t145.0.1-1\t-\t-\nrepo\tlinux-cachyos\t6.17.8-1\t6.17.9-1\t-\t-\nrepo\tmesa\t1:25.2.6-1\t1:25.2.7-1\t-\t-\nrepo\tpipewire\t1:1.4.9-1\t1:1.4.10-1\t-\t-\nrepo\tqt6-base\t6.12.0-3.1\t6.12.0-5.1\t-\tshell\nrepo\tqt6-declarative\t6.12.0-2\t6.12.0-3\t-\tshell\nrepo\thyprland\t0.56.2-3.1\t0.57.2-1.1\theld\thypr\nrepo\taquamarine\t0.15.1-1.1\t0.16.0-1.1\theld\thypr\nrepo\thyprutils\t0.14.2-1.1\t0.14.3-1.1\theld\thypr\nrepo\tsystemd\t258.2-1\t258.3-1\t-\t-\nrepo\tnoto-fonts\t1:2025.11-1\t1:2025.12-1\t-\t-\naur\tzed-preview\t0.212.1-1\t0.213.0-1\t-\t-\n"
+  },
+  {
+   "match": "apsis-updates\\.sh pins",
+   "out": "hypr held\nshell mixed qt6-base qt6-declarative qt6-wayland\n"
+  },
+  {
+   "match": "apsis-updates\\.sh status",
+   "out": "snapper yes\nsnappac yes\nbootable yes\n"
+  },
+  {
+   "match": "update\\.sh newer",
+   "out": "current\t2.4.0\t2.4.0\t0\n"
+  },
+  {
+   "match": "pamixer --get-volume.*brightnessctl",
+   "out": "62 false false 74\n"
+  },
+  {
+   "match": "nmcli radio wifi",
+   "out": "enabled\ton\tStudio Wi-Fi\tbalanced\t"
+  },
+  {
+   "match": "apsis-media\\.sh status",
+   "out": "Playing\tNeon Harbour\tThe Paper Kites\tfile://$HOME/.cache/apsis/cover.jpg\t96\t231000000\tSunset Tapes\t\n"
+  },
+  {
+   "match": "apsis-sysinfo\\.sh; echo",
+   "out": "18 42 54\n76 Discharging\n"
+  },
+  {
+   "match": "apsis-sysinfo\\.sh",
+   "out": "18 42 54\n"
+  },
+  {
+   "match": "apsis-weather-full\\.sh",
+   "out": ""
+  },
+  {
+   "match": "apsis-weather\\.sh",
+   "out": "24\tClear\tclear sky\t24\t27\t18\t41\tLisbon\n"
+  },
+  {
+   "match": "power_supply/BAT.*energy_now",
+   "out": "76\nDischarging\n41800000\n55000000\n62000000\n9800000\n"
+  },
+  {
+   "match": "power_supply/BAT",
+   "out": "76 Discharging\n"
+  },
+  {
+   "match": "nmcli -t -f TYPE,STATE",
+   "out": "wifi\n"
+  },
+  {
+   "match": "bluetoothctl show.*devices Connected",
+   "out": "on conn"
+  },
+  {
+   "match": "pamixer --default-source --get-mute",
+   "out": "false\n"
+  },
+  {
+   "match": "pamixer --get-volume\\) \\$\\(pamixer --get-mute",
+   "out": "62 false\n"
+  },
+  {
+   "match": "hyprctl devices -j",
+   "out": "{\"keyboards\": [{\"name\": \"at-translated-set-2-keyboard\", \"main\": true, \"layout\": \"us\", \"active_keymap\": \"English (US)\"}]}"
+  },
+  {
+   "match": "getent passwd",
+   "out": "Mira\n"
+  },
+  {
+   "match": "apsis-train\\.sh status",
+   "out": "off\tno\t0\n"
+  },
+  {
+   "match": "nvidia-smi",
+   "out": ""
+  },
+  {
+   "match": "apsis-eq\\.sh status",
+   "out": "ok\n"
+  },
+  {
+   "match": "apsis-doctor\\.sh --tsv",
+   "out": "ok\tHyprland is running\tv0.56.2\t\nok\tthe shell is running once\t\t\nok\tpolkit agent\tthe shell's\t\nok\tBluetooth pairing agent\tthe shell's\t\nok\tsnapshots around every update\tsnap-pac\t\n"
+  },
+  {
+   "match": "apsis-wall-list\\.sh",
+   "out": "1794843495\t$HOME/Apsis/wallpapers/dusk.jpg\t$HOME/Apsis/wallpapers/dusk.jpg\timage\n1794839895\t$HOME/Apsis/wallpapers/ember.jpg\t$HOME/Apsis/wallpapers/ember.jpg\timage\n1794836295\t$HOME/Apsis/wallpapers/haze.jpg\t$HOME/Apsis/wallpapers/haze.jpg\timage\n1794832695\t$HOME/Apsis/wallpapers/moss.jpg\t$HOME/Apsis/wallpapers/moss.jpg\timage\n1794829095\t$HOME/Apsis/wallpapers/tide.jpg\t$HOME/Apsis/wallpapers/tide.jpg\timage\n"
+  },
+  {
+   "match": "Apsis/pfps",
+   "out": ""
+  },
+  {
+   "match": "cliphist list",
+   "out": "41\thttps://github.com/hyprwm/Hyprland\n40\tmeeting notes for thursday\n39\t#EC4C78\n38\tsudo pacman -Syu\n"
+  },
+  {
+   "match": "apsis-shell\\.sh scale",
+   "out": "all=1\n"
+  },
+  {
+   "match": "apsis-wifi\\.sh.* list",
+   "out": "yes\t82\tWPA2\tStudio Wi-Fi\tyes\nno\t64\tWPA2\tLibrary\tno\nno\t48\t\tCafe Guest\tno\nno\t31\tWPA3\tNeighbours 5G\tno\n"
+  },
+  {
+   "match": "apsis-wifi\\.sh.* status",
+   "out": "Studio Wi-Fi\t192.168.1.24\n"
+  },
+  {
+   "match": "hostname.*uptime",
+   "out": "studio\n3 hours, 12 minutes\n"
+  },
+  {
+   "match": "apsis-fingerprint\\.sh status",
+   "out": "ready\n"
+  },
+  {
+   "match": "hyprctl monitors all -j",
+   "out": "[{\"id\": 0, \"name\": \"eDP-1\", \"description\": \"Built-in display\", \"make\": \"BOE\", \"model\": \"0x0BCA\", \"width\": 1920, \"height\": 1080, \"refreshRate\": 144.0, \"x\": 0, \"y\": 0, \"scale\": 1.0, \"transform\": 0, \"focused\": true, \"dpmsStatus\": true, \"disabled\": false, \"mirrorOf\": \"none\", \"availableModes\": [\"1920x1080@144.00Hz\", \"1920x1080@60.00Hz\", \"1600x900@60.00Hz\"]}]"
+  },
+  {
+   "match": "apsis-keybind\\.sh list",
+   "run": "sh \"$HOME/.config/hypr/scripts/apsis-keybind.sh\" list"
+  },
+  {
+   "match": "Downloads.*Pictures",
+   "out": ""
+  },
+  {
+   "match": "Apsis/pictures",
+   "out": ""
+  },
+  {
+   "match": "^cava ",
+   "out": "250;574;671;743;899;883;650;491;415;378;438;626;781;692;564;562;466;205;333;564;615;523;548;586;416;223;324;477;434;441;559;523;\n"
+  }
+ ],
+ "apps": [
+  {
+   "id": "firefox",
+   "name": "Firefox",
+   "genericName": "Web Browser",
+   "comment": "Web Browser",
+   "icon": "firefox",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "firefox",
+   "command": [
+    "firefox"
+   ],
+   "tile": "#E66000"
+  },
+  {
+   "id": "files",
+   "name": "Files",
+   "genericName": "File Manager",
+   "comment": "File Manager",
+   "icon": "files",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "files",
+   "command": [
+    "files"
+   ],
+   "tile": "#4C8BF5"
+  },
+  {
+   "id": "kitty",
+   "name": "kitty",
+   "genericName": "Terminal",
+   "comment": "Terminal",
+   "icon": "kitty",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "kitty",
+   "command": [
+    "kitty"
+   ],
+   "tile": "#1E1E2E"
+  },
+  {
+   "id": "zed",
+   "name": "Zed",
+   "genericName": "Code Editor",
+   "comment": "Code Editor",
+   "icon": "zed",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "zed",
+   "command": [
+    "zed"
+   ],
+   "tile": "#2D6CDF"
+  },
+  {
+   "id": "music",
+   "name": "Music",
+   "genericName": "Music Player",
+   "comment": "Music Player",
+   "icon": "music",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "music",
+   "command": [
+    "music"
+   ],
+   "tile": "#1DB954"
+  },
+  {
+   "id": "chat",
+   "name": "Chat",
+   "genericName": "Messaging",
+   "comment": "Messaging",
+   "icon": "chat",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "chat",
+   "command": [
+    "chat"
+   ],
+   "tile": "#5865F2"
+  },
+  {
+   "id": "notes",
+   "name": "Notes",
+   "genericName": "Notes",
+   "comment": "Notes",
+   "icon": "notes",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "notes",
+   "command": [
+    "notes"
+   ],
+   "tile": "#7C3AED"
+  },
+  {
+   "id": "gimp",
+   "name": "GIMP",
+   "genericName": "Image Editor",
+   "comment": "Image Editor",
+   "icon": "gimp",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "gimp",
+   "command": [
+    "gimp"
+   ],
+   "tile": "#6E5D4E"
+  },
+  {
+   "id": "blender",
+   "name": "Blender",
+   "genericName": "3D Creation",
+   "comment": "3D Creation",
+   "icon": "blender",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "blender",
+   "command": [
+    "blender"
+   ],
+   "tile": "#E87D0D"
+  },
+  {
+   "id": "obs",
+   "name": "OBS Studio",
+   "genericName": "Recording",
+   "comment": "Recording",
+   "icon": "obs",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "obs",
+   "command": [
+    "obs"
+   ],
+   "tile": "#302E31"
+  },
+  {
+   "id": "vlc",
+   "name": "VLC",
+   "genericName": "Media Player",
+   "comment": "Media Player",
+   "icon": "vlc",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "vlc",
+   "command": [
+    "vlc"
+   ],
+   "tile": "#FF8800"
+  },
+  {
+   "id": "steam",
+   "name": "Steam",
+   "genericName": "Games",
+   "comment": "Games",
+   "icon": "steam",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "steam",
+   "command": [
+    "steam"
+   ],
+   "tile": "#1B2838"
+  },
+  {
+   "id": "calculator",
+   "name": "Calculator",
+   "genericName": "Calculator",
+   "comment": "Calculator",
+   "icon": "calculator",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "calculator",
+   "command": [
+    "calculator"
+   ],
+   "tile": "#5E5C64"
+  },
+  {
+   "id": "settings",
+   "name": "System Settings",
+   "genericName": "Settings",
+   "comment": "Settings",
+   "icon": "settings",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "settings",
+   "command": [
+    "settings"
+   ],
+   "tile": "#3D7A7A"
+  },
+  {
+   "id": "btop",
+   "name": "btop",
+   "genericName": "System Monitor",
+   "comment": "System Monitor",
+   "icon": "btop",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "btop",
+   "command": [
+    "btop"
+   ],
+   "tile": "#444B6A"
+  },
+  {
+   "id": "thunderbird",
+   "name": "Mail",
+   "genericName": "Email",
+   "comment": "Email",
+   "icon": "thunderbird",
+   "noDisplay": false,
+   "runInTerminal": false,
+   "categories": [],
+   "keywords": [],
+   "execString": "thunderbird",
+   "command": [
+    "thunderbird"
+   ],
+   "tile": "#0A84FF"
+  }
+ ],
+ "toplevels": [],
+ "bluetooth": [
+  {
+   "name": "Buds Pro",
+   "address": "A4:C1:38:2B:10:E7",
+   "paired": true,
+   "bonded": true,
+   "trusted": true,
+   "connected": true,
+   "pairing": false,
+   "batteryAvailable": true,
+   "battery": 0.8,
+   "icon": "audio-headset",
+   "state": 1,
+   "blocked": false
+  },
+  {
+   "name": "Keychron K3",
+   "address": "DC:2C:26:01:9A:44",
+   "paired": true,
+   "bonded": true,
+   "trusted": true,
+   "connected": false,
+   "pairing": false,
+   "batteryAvailable": false,
+   "battery": 0,
+   "icon": "input-keyboard",
+   "state": 0,
+   "blocked": false
+  },
+  {
+   "name": "Living Room Speaker",
+   "address": "F0:5C:77:12:AB:90",
+   "paired": false,
+   "bonded": false,
+   "trusted": false,
+   "connected": false,
+   "pairing": false,
+   "batteryAvailable": false,
+   "battery": 0,
+   "icon": "audio-speakers",
+   "state": 0,
+   "blocked": false
+  }
+ ],
+ "pipewire": [
+  {
+   "id": 51,
+   "name": "alsa_output.pci.analog-stereo",
+   "description": "Speakers",
+   "nickname": "Speakers",
+   "isSink": true,
+   "isStream": false,
+   "ready": true,
+   "audio": {
+    "volume": 0.62,
+    "muted": false
+   },
+   "properties": {
+    "media.class": "Audio/Sink",
+    "node.description": "Speakers"
+   }
+  },
+  {
+   "id": 52,
+   "name": "bluez_output.buds",
+   "description": "Buds Pro",
+   "nickname": "Buds Pro",
+   "isSink": true,
+   "isStream": false,
+   "ready": true,
+   "audio": {
+    "volume": 0.45,
+    "muted": false
+   },
+   "properties": {
+    "media.class": "Audio/Sink",
+    "node.description": "Buds Pro"
+   }
+  },
+  {
+   "id": 53,
+   "name": "alsa_input.pci.analog-stereo",
+   "description": "Microphone",
+   "nickname": "Microphone",
+   "isSink": false,
+   "isStream": false,
+   "ready": true,
+   "audio": {
+    "volume": 0.7,
+    "muted": false
+   },
+   "properties": {
+    "media.class": "Audio/Source",
+    "node.description": "Microphone"
+   }
+  },
+  {
+   "id": 60,
+   "name": "firefox",
+   "description": "Firefox",
+   "nickname": "",
+   "isSink": true,
+   "isStream": true,
+   "ready": true,
+   "audio": {
+    "volume": 0.8,
+    "muted": false
+   },
+   "properties": {
+    "media.class": "Stream/Output/Audio",
+    "application.name": "Firefox",
+    "application.icon-name": "firefox",
+    "media.name": "Video"
+   }
+  },
+  {
+   "id": 61,
+   "name": "music",
+   "description": "Music",
+   "nickname": "",
+   "isSink": true,
+   "isStream": true,
+   "ready": true,
+   "audio": {
+    "volume": 0.65,
+    "muted": false
+   },
+   "properties": {
+    "media.class": "Stream/Output/Audio",
+    "application.name": "Music",
+    "application.icon-name": "music",
+    "media.name": "Neon Harbour"
+   }
+  }
+ ]
+}

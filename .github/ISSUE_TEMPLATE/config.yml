@@ -1,0 +1,8 @@
+# What GitHub shows when someone opens a new issue: only the forms, plus a link for security problems.
+# Edit: the links here; the forms are bug_report.yml and feature_request.yml.
+
+blank_issues_enabled: false
+contact_links:
+  - name: Security problem
+    url: https://github.com/Aws-702/Apsis/security/policy
+    about: Report it privately through the Security tab, not as an issue.

@@ -1,0 +1,17 @@
+# Registers the Quickshell stand-ins that shot.py puts on the import path.
+# Edit: add a line for each new stand-in in this folder.
+
+module Quickshell
+singleton Quickshell 1.0 QuickshellObj.qml
+ExclusionMode 1.0 ExclusionMode.qml
+singleton DesktopEntries 1.0 DesktopEntries.qml
+Singleton 1.0 Singleton.qml
+Scope 1.0 Scope.qml
+ShellRoot 1.0 ShellRoot.qml
+PanelWindow 1.0 PanelWindow.qml
+FloatingWindow 1.0 PanelWindow.qml
+PanelAnchors 1.0 PanelAnchors.qml
+PanelMargins 1.0 PanelMargins.qml
+LazyLoader 1.0 LazyLoader.qml
+Variants 1.0 Variants.qml
+Region 1.0 Region.qml

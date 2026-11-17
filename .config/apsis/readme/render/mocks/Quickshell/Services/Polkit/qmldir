@@ -1,0 +1,5 @@
+# Registers the polkit stand-in.
+# Edit: add a line for each new stand-in in this folder.
+
+module Quickshell.Services.Polkit
+PolkitAgent 1.0 PolkitAgent.qml

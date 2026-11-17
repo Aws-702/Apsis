@@ -1,0 +1,27 @@
+# Registers the services/ singletons for `import "../services"`.
+# Edit: add a line here when you add a service.
+
+Poll 1.0 Poll.qml
+JsonStore 1.0 JsonStore.qml
+singleton Settings 1.0 Settings.qml
+singleton PhoneState 1.0 PhoneState.qml
+singleton EditMode 1.0 EditMode.qml
+singleton Desktop 1.0 Desktop.qml
+singleton Dock 1.0 Dock.qml
+singleton Sys 1.0 Sys.qml
+singleton SysTheme 1.0 SysTheme.qml
+singleton Icons 1.0 Icons.qml
+singleton Wall 1.0 Wall.qml
+singleton LockState 1.0 LockState.qml
+singleton AppList 1.0 AppList.qml
+singleton Cava 1.0 Cava.qml
+singleton Lyrics 1.0 Lyrics.qml
+singleton Eq 1.0 Eq.qml
+singleton Countdown 1.0 Countdown.qml
+singleton Shelf 1.0 Shelf.qml
+singleton Ultra 1.0 Ultra.qml
+singleton Updates 1.0 Updates.qml
+singleton Doctor 1.0 Doctor.qml
+singleton Notifs 1.0 Notifs.qml
+singleton Record 1.0 Record.qml
+singleton Forecast 1.0 Forecast.qml

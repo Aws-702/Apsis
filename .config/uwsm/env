@@ -1,0 +1,11 @@
+# Session environment for uwsm: GBM and EGL for NVIDIA when it is the only GPU, and Qt apps themed through qt6ct when it is installed.
+# Edit: add exports here for the whole session.
+
+if [ -d /sys/module/nvidia ] && [ ! -d /sys/module/i915 ] && [ ! -d /sys/module/amdgpu ]; then
+    export GBM_BACKEND=nvidia-drm
+    export EGL_PLATFORM=wayland
+fi
+
+if command -v qt6ct >/dev/null 2>&1; then
+    export QT_QPA_PLATFORMTHEME=qt6ct
+fi

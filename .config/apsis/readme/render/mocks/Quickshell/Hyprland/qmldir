@@ -1,0 +1,5 @@
+# Registers the Quickshell.Hyprland stand-ins.
+# Edit: add a line for each new stand-in in this folder.
+
+module Quickshell.Hyprland
+singleton Hyprland 1.0 Hyprland.qml

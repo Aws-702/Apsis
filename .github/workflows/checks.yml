@@ -1,0 +1,43 @@
+# Runs on every push and pull request: the shell's logic tests, every script
+# through shellcheck, and the Hyprland Lua config through the Lua compiler.
+name: checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Logic tests (quickshell/lib)
+        run: node .config/apsis/tests/run.js
+
+  scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: shellcheck
+        run: |
+          status=0
+          for f in .config/hypr/scripts/*.sh .config/apsis/setup.sh .config/apsis/sddm/install.sh; do
+            if head -n 1 "$f" | grep -q bash; then shell=bash; else shell=sh; fi
+            shellcheck -s "$shell" -S warning "$f" || status=1
+          done
+          exit $status
+
+  lua:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Lua
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lua5.4
+      - name: Hyprland config parses
+        run: luac5.4 -p .config/hypr/hyprland.lua

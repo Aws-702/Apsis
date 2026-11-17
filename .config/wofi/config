@@ -1,0 +1,12 @@
+# The wofi launcher: app mode, size and place; its look is style.css, which apsis-palette.sh copies from the palette files.
+# Edit: size and behaviour here; colours in the style files.
+
+show=drun
+prompt=Search
+width=600
+height=420
+location=center
+allow_images=true
+insensitive=true
+no_actions=true
+gtk_dark=true

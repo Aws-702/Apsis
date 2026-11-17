@@ -1,0 +1,30 @@
+# Written by apsis-systheme.sh; use it with: general.import = ["~/.config/apsis/terminal/alacritty.toml"]
+# Edit: hypr/scripts/apsis-systheme.sh (this file is rewritten).
+
+[colors.primary]
+foreground = "#e1e2eb"
+background = "#0c0d12"
+[colors.cursor]
+text = "#000000"
+cursor = "#adc6ff"
+[colors.selection]
+text = "#000000"
+background = "#adc6ff"
+[colors.normal]
+black = "#1d1f24"
+red = "#ffb4ab"
+green = "#87d59f"
+yellow = "#f4aeff"
+blue = "#7785a6"
+magenta = "#f4aeff"
+cyan = "#b1c6f7"
+white = "#c2c6d5"
+[colors.bright]
+black = "#282a30"
+red = "#ffc6c0"
+green = "#a5dfb7"
+yellow = "#f6c2ff"
+blue = "#99a3bc"
+magenta = "#f6c2ff"
+cyan = "#c4d4f9"
+white = "#e1e2eb"

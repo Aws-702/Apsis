@@ -1,0 +1,6 @@
+# Registers the notification stand-ins.
+# Edit: add a line for each new stand-in in this folder.
+
+module Quickshell.Services.Notifications
+NotificationServer 1.0 NotificationServer.qml
+NotificationUrgency 1.0 NotificationUrgency.qml

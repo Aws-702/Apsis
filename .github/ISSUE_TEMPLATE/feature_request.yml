@@ -1,0 +1,46 @@
+# The idea form on GitHub: the problem first, then the idea, the part it belongs to and any sketch.
+# Edit: the fields and the Part list here.
+
+name: Idea
+description: Something Apsis could do, or do better.
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: part
+    attributes:
+      label: Part
+      options:
+        - Phone
+        - Desktop widgets or Edit Desktop
+        - Dock
+        - Bar
+        - Lockscreen or login screen
+        - Wallpapers and palettes
+        - Updates, install or setup
+        - Keys
+        - Something new
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What gets in your way
+      description: The problem or the missing piece, in your own words.
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: How it could work. A sketch or a screenshot from somewhere else helps.
+    validations:
+      required: true
+
+  - type: textarea
+    id: other
+    attributes:
+      label: What you tried instead
+      description: Workarounds, settings or other rices that do it.

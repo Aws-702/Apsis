@@ -1,0 +1,15 @@
+# SDDM theme metadata for Apsis.
+# Edit: the name and description shown in SDDM tools.
+
+[SddmGreeterTheme]
+Name=Apsis
+Description=Apsis login theme
+Author=Aws
+License=GPL
+Type=user
+Version=1.0
+Screenshot=
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=apsis
+Theme-API=2.0

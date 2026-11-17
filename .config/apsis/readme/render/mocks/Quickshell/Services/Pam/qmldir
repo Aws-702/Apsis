@@ -1,0 +1,6 @@
+# Registers the PAM stand-ins.
+# Edit: add a line for each new stand-in in this folder.
+
+module Quickshell.Services.Pam
+PamContext 1.0 PamContext.qml
+PamResult 1.0 PamResult.qml

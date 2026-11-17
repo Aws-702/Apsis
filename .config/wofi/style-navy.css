@@ -1,0 +1,43 @@
+/* The wofi launcher in the Navy palette: card, search box and entries. */
+/* Edit: colours here; apsis-palette.sh copies the file for the palette to style.css. */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+}
+
+window {
+    background-color: transparent;
+}
+
+#outer-box {
+    background-color: #101445;
+    border: 2px solid #3AD6E0;
+    border-radius: 16px;
+    margin: 0;
+    padding: 14px;
+}
+
+#input {
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1C2160;
+    color: #F3ECF5;
+}
+
+#input image { color: #98A0D0; }
+#scroll { margin: 0; }
+#inner-box { background-color: transparent; }
+
+#entry {
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin: 2px 0;
+}
+
+#entry:selected { background-color: #3AD6E0; }
+#entry:selected #text { color: #0A0A3C; }
+#text { color: #F3ECF5; }
+#img { margin-right: 10px; }

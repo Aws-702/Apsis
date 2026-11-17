@@ -1,0 +1,7 @@
+# Registers Theme, Motion, Config and UiState as singletons for `import "../config"`.
+# Edit: add a line here when you add a singleton to config/.
+
+singleton Theme 1.0 Theme.qml
+singleton Config 1.0 Config.qml
+singleton UiState 1.0 UiState.qml
+singleton Motion 1.0 Motion.qml

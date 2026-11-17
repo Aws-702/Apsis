@@ -1,0 +1,62 @@
+/* The wofi launcher in the Cherry palette: card, search box and entries. */
+/* Edit: colours here; apsis-palette.sh copies the file for the palette to style.css. */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+}
+
+window {
+    background-color: transparent;
+}
+
+#outer-box {
+    background-color: #210D15;
+    border: 2px solid #EC4C78;
+    border-radius: 16px;
+    margin: 0;
+    padding: 14px;
+}
+
+#input {
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #351421;
+    color: #F6E9EF;
+}
+
+#input image {
+    color: #C99BAB;
+}
+
+#scroll {
+    margin: 0;
+}
+
+#inner-box {
+    background-color: transparent;
+}
+
+#entry {
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin: 2px 0;
+}
+
+#entry:selected {
+    background-color: #EC4C78;
+}
+
+#entry:selected #text {
+    color: #17090F;
+}
+
+#text {
+    color: #F6E9EF;
+}
+
+#img {
+    margin-right: 10px;
+}

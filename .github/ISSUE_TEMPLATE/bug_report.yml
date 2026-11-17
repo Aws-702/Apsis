@@ -1,0 +1,92 @@
+# The bug report form on GitHub: what broke, how to get there, the apsis doctor output and versions.
+# Edit: the fields and the Part list here; the form picker is config.yml beside it.
+
+name: Bug report
+description: Something in Apsis is broken or does the wrong thing.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. A security problem goes through the Security tab instead (see SECURITY.md), not here.
+
+  - type: dropdown
+    id: part
+    attributes:
+      label: Part
+      options:
+        - Phone (quick panel, apps, sound, Wi-Fi, Bluetooth, settings)
+        - Desktop widgets or Edit Desktop
+        - Dock
+        - Bar
+        - Lockscreen
+        - Login screen (SDDM)
+        - Wallpapers and palettes
+        - Updates and pins
+        - Install, setup or apsis update
+        - Keys and the cheat sheet
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you saw. A screenshot helps for anything on screen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen
+      placeholder: |
+        1. Open the phone with SUPER + Space
+        2. Go to Updates
+        3. Press Review held back updates
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+
+  - type: textarea
+    id: doctor
+    attributes:
+      label: apsis doctor
+      description: Paste the output of `apsis doctor`. It only reads, it never changes anything.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: versions
+    attributes:
+      label: Versions
+      description: Paste the output of the command below.
+      value: |
+        cat ~/.config/apsis/VERSION; hyprctl version | head -1; qs --version; pacman -Q qt6-base; lspci | grep -iE 'vga|3d'
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: If the shell crashed or misbehaved, `qs log` shows its log; Hyprland config errors are in `~/.cache/apsis/hypr-errors.log`.
+      render: text
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send
+      options:
+        - label: I took out anything private from what I pasted (API keys, tokens, my username, Wi-Fi names, my city).
+          required: true
+        - label: I searched the open and closed issues for this.
+          required: true

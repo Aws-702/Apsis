@@ -1,0 +1,12 @@
+# matugen config: builds the auto palette from the wallpaper.
+# Edit: the templates list here; the templates in matugen/templates/.
+
+[config]
+
+[templates.apsis_json]
+input_path  = "~/.config/matugen/templates/apsis.json"
+output_path = "~/.cache/quickshell/apsis-auto.json"
+
+[templates.apsis_wofi]
+input_path  = "~/.config/matugen/templates/wofi-auto.css"
+output_path = "~/.config/wofi/style-auto.css"

@@ -1,0 +1,7 @@
+# Registers the Quickshell.Bluetooth stand-ins.
+# Edit: add a line for each new stand-in in this folder.
+
+module Quickshell.Bluetooth
+singleton Bluetooth 1.0 Bluetooth.qml
+BluetoothDeviceState 1.0 BluetoothDeviceState.qml
+BluetoothAdapterState 1.0 BluetoothAdapterState.qml
